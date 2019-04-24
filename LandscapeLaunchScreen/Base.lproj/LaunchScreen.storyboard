@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +15,90 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9B-Bg-wwJ" userLabel="PortraitSpacer">
+                                <rect key="frame" x="-5120" y="20" width="3840" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="aCI-qa-1pm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-0z-m4I" userLabel="LandscapeSpacer">
+                                <rect key="frame" x="-5120" y="40" width="5120" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="WUe-0U-xI0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvt-ED-IA5" userLabel="PositionSpacer">
+                                <rect key="frame" x="-5120" y="60" width="5120" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JFP-gz-Q70"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ay-P9-zh3" userLabel="ContainerView">
+                                <rect key="frame" x="-5120" y="0.0" width="6144" height="768"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImageLandscape" translatesAutoresizingMaskIntoConstraints="NO" id="JSD-WG-7XU" userLabel="LaunchImageLandscape">
+                                        <rect key="frame" x="5120" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImagePortrait" translatesAutoresizingMaskIntoConstraints="NO" id="mpG-p1-HMU" userLabel="LaunchImagePortrait">
+                                        <rect key="frame" x="3840" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mpG-p1-HMU" firstAttribute="bottom" secondItem="3ay-P9-zh3" secondAttribute="bottom" id="C1a-tl-dhu"/>
+                                    <constraint firstItem="JSD-WG-7XU" firstAttribute="top" secondItem="3ay-P9-zh3" secondAttribute="top" id="L91-Ow-ayU"/>
+                                    <constraint firstItem="JSD-WG-7XU" firstAttribute="bottom" secondItem="3ay-P9-zh3" secondAttribute="bottom" id="R3k-jj-Y5k"/>
+                                    <constraint firstItem="mpG-p1-HMU" firstAttribute="top" secondItem="3ay-P9-zh3" secondAttribute="top" id="UoQ-sY-iTM"/>
+                                    <constraint firstItem="mpG-p1-HMU" firstAttribute="right" secondItem="3ay-P9-zh3" secondAttribute="right" priority="250" id="bgH-Mt-SwG"/>
+                                    <constraint firstItem="JSD-WG-7XU" firstAttribute="right" relation="lessThanOrEqual" secondItem="3ay-P9-zh3" secondAttribute="right" id="hGI-h1-qMX"/>
+                                    <constraint firstItem="mpG-p1-HMU" firstAttribute="right" relation="lessThanOrEqual" secondItem="3ay-P9-zh3" secondAttribute="right" id="ona-bd-Gza"/>
+                                    <constraint firstItem="JSD-WG-7XU" firstAttribute="right" secondItem="3ay-P9-zh3" secondAttribute="right" priority="250" id="sAI-uX-n8B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="width" relation="lessThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="5" id="0B0-XM-k4u"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="top" secondItem="T9B-Bg-wwJ" secondAttribute="bottom" id="3Q7-eJ-Wvi"/>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="5" priority="250" id="4nP-TT-gfg" userLabel="PortraitSpacer.width = 5 x height @250"/>
+                            <constraint firstItem="JSD-WG-7XU" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="5it-Hk-zon"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="width" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="5" id="9ah-Qe-VM9" userLabel="LandscapeSpacer.width ≥ 5 × height"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="5" priority="250" id="C1o-gh-UV7" userLabel="LandscapeSpacer.width = 5 × height @250"/>
+                            <constraint firstItem="mpG-p1-HMU" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="CpW-zD-TVJ"/>
+                            <constraint firstItem="mpG-p1-HMU" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="CtG-4S-48v"/>
+                            <constraint firstItem="3ay-P9-zh3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DEm-l5-Na0"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="5" priority="250" id="Ilc-PR-yI6"/>
+                            <constraint firstItem="xvt-ED-IA5" firstAttribute="left" secondItem="3ay-P9-zh3" secondAttribute="left" id="MCf-4j-Ggb"/>
+                            <constraint firstItem="xvt-ED-IA5" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="5" id="NbH-Zd-9WO"/>
+                            <constraint firstItem="3ay-P9-zh3" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="Nmb-Px-M4j"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="width" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="5" id="RWj-W7-iDK"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="left" secondItem="3ay-P9-zh3" secondAttribute="left" id="RjU-V8-NnY"/>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="width" relation="lessThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="5" id="W3Y-uF-veo" userLabel="PortraitSpacer.width ≤ 5 x height"/>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="5" priority="250" id="WDK-jX-reE"/>
+                            <constraint firstItem="xvt-ED-IA5" firstAttribute="top" secondItem="Nlx-0z-m4I" secondAttribute="bottom" id="ZCD-wB-EB1"/>
+                            <constraint firstItem="Nlx-0z-m4I" firstAttribute="right" secondItem="JSD-WG-7XU" secondAttribute="left" id="bWC-kj-6ij"/>
+                            <constraint firstItem="JSD-WG-7XU" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="cg4-at-XHB"/>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="imr-m4-YwW"/>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="right" secondItem="mpG-p1-HMU" secondAttribute="left" id="mCA-Bo-Uxy"/>
+                            <constraint firstItem="T9B-Bg-wwJ" firstAttribute="left" secondItem="3ay-P9-zh3" secondAttribute="left" id="nRk-4r-MAi"/>
+                            <constraint firstItem="xvt-ED-IA5" firstAttribute="right" secondItem="Ze5-6b-2t3" secondAttribute="left" id="vB6-h9-Kg4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchImageLandscape" width="2732" height="2048"/>
+        <image name="LaunchImagePortrait" width="2048" height="2732"/>
+    </resources>
 </document>
