@@ -1,7 +1,7 @@
 # Adaptive iOS launch screen
 
 It's not easy to use a launch screen storyboard that uses different images for iPad in portrait and landscape mode. 
-For the iPhone this can be solved using hight and width classes. 
+For the iPhone this can be solved using height and width classes. 
 But as iPads have regular height and regular width it's not possible to determine the orientation of the device within the launch screen storyboard.
 
 This iOS project has an adaptive launch screen storyboard using spacer views that position the correct image in the visible area and move the other one off screen.
